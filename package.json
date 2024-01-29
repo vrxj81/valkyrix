@@ -4,9 +4,11 @@
   "license": "MIT",
   "scripts": {},
   "private": true,
-  "dependencies": {},
   "devDependencies": {
+    "@nx/angular": "^17.2.8",
     "@nx/js": "17.2.8",
+    "@nx/nest": "^17.2.8",
+    "@nx/react": "^17.2.8",
     "@nx/workspace": "17.2.8",
     "@swc-node/register": "~1.6.7",
     "@swc/core": "~1.3.85",
