@@ -46,6 +46,14 @@
   "release": {
     "version": {
       "conventionalCommits": true
+    },
+    "releaseTagPattern": "release/{projectName}/{version}",
+    "git": {
+      "commitMessage": "chore(release): {version}"
+    },
+    "projectsRelationship": "independent",
+    "changelog": {
+      "projectChangelogs": true
     }
   },
   "generators": {
