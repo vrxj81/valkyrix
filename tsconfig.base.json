@@ -17,6 +17,9 @@
     "paths": {
       "@valkyrix/domain-interfaces": [
         "libs/shared/domain/interfaces/src/index.ts"
+      ],
+      "@valkyrix/nest-users-data-access": [
+        "libs/shared/nest/users/data-access/src/index.ts"
       ]
     }
   },
