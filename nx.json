@@ -15,5 +15,40 @@
     "production": ["default"],
     "sharedGlobals": []
   },
+  "release": {
+    "version": {
+      "conventionalCommits": true
+    }
+  },
+  "generators": {
+    "@nx/angular": {
+      "application": {
+        "style": "css",
+        "bundler": "esbuild",
+        "routing": "true",
+        "standalone": true,
+        "strict": true,
+        "e2eTestRunner": "playwright"
+      },
+      "library": {
+        "buildable": true,
+        "publishable": true,
+        "strict": true
+      }
+    },
+    "@nx/nest": {
+      "library": {
+        "buildable": true,
+        "publishable": true,
+        "strict": true
+      }
+    },
+    "@nx/react": {
+      "library": {
+        "publishable": true,
+        "strict": true
+      }
+    }
+  },
   "nxCloudAccessToken": "ZDI3Y2QxODktNjM0Zi00M2Q2LWJmYjMtMmNmNGE2MWVmMWU3fHJlYWQtd3JpdGU="
 }
