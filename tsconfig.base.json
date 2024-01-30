@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@valkyrix/domain-interfaces": [
+        "libs/shared/domain/interfaces/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
