@@ -1,0 +1,13 @@
+{
+  "name": "@valkyrix/nest-users-data-access",
+  "version": "0.1.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "type": "commonjs",
+  "main": "./src/index.js",
+  "typings": "./src/index.d.ts"
+}

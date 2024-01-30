@@ -1,0 +1,35 @@
+{
+  "name": "nest-users-data-access",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/shared/nest/users/data-access/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/shared/nest/users/data-access",
+        "tsConfig": "libs/shared/nest/users/data-access/tsconfig.lib.json",
+        "packageJson": "libs/shared/nest/users/data-access/package.json",
+        "main": "libs/shared/nest/users/data-access/src/index.ts",
+        "assets": ["libs/shared/nest/users/data-access/*.md"]
+      }
+    },
+    "publish": {
+      "command": "node tools/scripts/publish.mjs nest-users-data-access {args.ver} {args.tag}",
+      "dependsOn": ["build"]
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/shared/nest/users/data-access/jest.config.ts"
+      }
+    }
+  },
+  "tags": ["scope:api", "type:library"]
+}
