@@ -1,0 +1,35 @@
+{
+  "name": "nest-users-feature",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/shared/nest/users/feature/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/shared/nest/users/feature",
+        "tsConfig": "libs/shared/nest/users/feature/tsconfig.lib.json",
+        "packageJson": "libs/shared/nest/users/feature/package.json",
+        "main": "libs/shared/nest/users/feature/src/index.ts",
+        "assets": ["libs/shared/nest/users/feature/*.md"]
+      }
+    },
+    "publish": {
+      "command": "node tools/scripts/publish.mjs nest-users-feature {args.ver} {args.tag}",
+      "dependsOn": ["build"]
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/shared/nest/users/feature/jest.config.ts"
+      }
+    }
+  },
+  "tags": ["scope:api", "type:feature"]
+}

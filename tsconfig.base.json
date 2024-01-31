@@ -20,6 +20,9 @@
       ],
       "@valkyrix/nest-users-data-access": [
         "libs/shared/nest/users/data-access/src/index.ts"
+      ],
+      "@valkyrix/nest-users-feature": [
+        "libs/shared/nest/users/feature/src/index.ts"
       ]
     }
   },

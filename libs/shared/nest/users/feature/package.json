@@ -1,15 +1,14 @@
 {
-  "name": "@valkyrix/nest-users-data-access",
+  "name": "@valkyrix/nest-users-feature",
   "version": "0.1.0",
   "publishConfig": {
     "access": "public"
   },
   "dependencies": {
     "tslib": "^2.3.0",
-    "@valkyrix/domain-interfaces": "0.1.0",
-    "typeorm": "^0.3.20",
     "@nestjs/common": "^10.0.2",
-    "@nestjs/typeorm": "^10.0.1"
+    "@valkyrix/nest-users-data-access": "0.1.0",
+    "@valkyrix/domain-interfaces": "0.1.0"
   },
   "type": "commonjs",
   "main": "./src/index.js",
