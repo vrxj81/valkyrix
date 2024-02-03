@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@pmspads/nest-roles-data-access": [
+        "libs/shared/nest/roles/data-access/src/index.ts"
+      ],
       "@valkyrix/domain-interfaces": [
         "libs/shared/domain/interfaces/src/index.ts"
       ],
