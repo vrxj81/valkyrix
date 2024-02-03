@@ -1,0 +1,35 @@
+{
+  "name": "nest-roles-data-access",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/shared/nest/roles/data-access/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/shared/nest/roles/data-access",
+        "tsConfig": "libs/shared/nest/roles/data-access/tsconfig.lib.json",
+        "packageJson": "libs/shared/nest/roles/data-access/package.json",
+        "main": "libs/shared/nest/roles/data-access/src/index.ts",
+        "assets": ["libs/shared/nest/roles/data-access/*.md"]
+      }
+    },
+    "publish": {
+      "command": "node tools/scripts/publish.mjs nest-roles-data-access {args.ver} {args.tag}",
+      "dependsOn": ["build"]
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/shared/nest/roles/data-access/jest.config.ts"
+      }
+    }
+  },
+  "tags": ["scope:api", "type:data-access"]
+}
