@@ -18,6 +18,9 @@
       "@valkyrix/domain-interfaces": [
         "libs/shared/domain/interfaces/src/index.ts"
       ],
+      "@valkyrix/nest-permissions-data-access": [
+        "libs/shared/nest/permissions/data-access/src/index.ts"
+      ],
       "@valkyrix/nest-roles-data-access": [
         "libs/shared/nest/roles/data-access/src/index.ts"
       ],
