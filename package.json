@@ -1,6 +1,6 @@
 {
   "name": "@valkyrix/source",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "license": "MIT",
   "scripts": {},
   "private": true,
@@ -51,4 +51,3 @@
     "includedScripts": []
   }
 }
-
