@@ -27,6 +27,11 @@
         "{workspaceRoot}/.eslintignore",
         "{workspaceRoot}/eslint.config.js"
       ]
+    },
+    "@nx/js:tsc": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
     }
   },
   "namedInputs": {
@@ -49,7 +54,7 @@
     },
     "releaseTagPattern": "release/{projectName}/{version}",
     "git": {
-      "commitMessage": "chore(release): {version}"
+      "commitMessage": "chore(release): {projectName}/{version}"
     },
     "projectsRelationship": "independent",
     "changelog": {

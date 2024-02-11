@@ -24,6 +24,9 @@
       "@valkyrix/nest-roles-data-access": [
         "libs/shared/nest/roles/data-access/src/index.ts"
       ],
+      "@valkyrix/nest-roles-feature": [
+        "libs/shared/nest/roles/feature/src/index.ts"
+      ],
       "@valkyrix/nest-users-data-access": [
         "libs/shared/nest/users/data-access/src/index.ts"
       ],
